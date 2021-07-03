@@ -4,12 +4,20 @@
 # Note: 0 is considered to be an even index.
 
 # Example
-s = abcdef
+# s = abcdef
 
 # Print abc def
 # Enter your code here. Read input from STDIN. Print output to STDOUT
 t = int(input())
-
-for i in (0,t):
+oStr=[]
+eStr = []
+for i in range(0,t):
     str=input()
-    print(str[0::2]+" "+str[1::2])
+    for x in range(0,len(str)):
+        y = float(str[x]) % 2
+        if y == 0:
+            oStr.append(str[x])
+        else:
+            eStr.append(str[x])
+    print("".join(eStr)+" "+"".join(oStr))
+ 
