@@ -13,9 +13,12 @@ for i in range(0,t):
     dic[d[0]] = d[1]
 
 for x in range(0,t):
-    c = input()
-    n = dic.get(c)
-    if n != None:
-        print(c+"="+str(n))
-    else:
-        print("Not found")
+    try:
+        c = input()
+        n = dic.get(c)
+        if n != None:
+            print("{}={}".format(c,n))
+        else:
+            print("Not found")
+    except:
+        break
