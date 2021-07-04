@@ -8,16 +8,16 @@
 
 # Print abc def
 # Enter your code here. Read input from STDIN. Print output to STDOUT
-t = int(input())
-oStr=[]
-eStr = []
-for i in range(0,t):
-    str=input()
+n = int(input())
+eve = []
+odd = []
+for i in range(0,n):
+    str = input()
     for x in range(0,len(str)):
-        y = float(str[x]) % 2
-        if y == 0:
-            oStr.append(str[x])
+        if x % 2 == 0:
+            eve.append(str[x])
         else:
-            eStr.append(str[x])
-    print("".join(eStr)+" "+"".join(oStr))
- 
+            odd.append(str[x])
+    print("".join(eve)+" "+"".join(odd))
+    eve.clear()
+    odd.clear()
