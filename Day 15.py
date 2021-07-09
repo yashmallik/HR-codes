@@ -27,9 +27,9 @@ class Solution:
         if not head:
             return newnode
         else:
-            var = head
-            while(var.next != None):
-                var = var.next
-            var.next = newnode
+            current = head
+            while current.next:
+                current = current.next
+            current.next = newnode
         return head
 
