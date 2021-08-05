@@ -18,8 +18,13 @@
     def levelOrder(self,root):
         #Write your code here
         queue = [root]
-        if root != None:
+        while queue:
             out = queue.pop()
-            print(out)
+            print(out.data, end=" ")
+            if out.left:
+                queue.insert(0, out.left)
+            if out.right:
+                queue.insert(0, out.right)
+            
             
         
