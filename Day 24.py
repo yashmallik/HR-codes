@@ -7,3 +7,36 @@
 # A removeDuplicates function is declared in your editor, which takes a pointer to the head node of a linked list as a parameter. Complete removeDuplicates so that it deletes any duplicate nodes from the list and returns the head of the updated list.
 
 # Note: The head pointer may be null, indicating that the list is empty. Be sure to reset your next pointer when performing deletions to avoid breaking the list.
+
+    def removeDuplicates(self,head):
+      
+        #Write your code here
+         if head == None:
+            return head;
+        s = head
+        while s.next != None:
+            if s.data == s.next.data:
+                s.next = s.next.next
+            else :
+                s = s.next
+
+        return head;
+
+
+# -------------------------------------------------------------------OR----------------------------------------------------------------------------------------------------------
+    def removeDuplicates(self,head):
+      
+        #Write your code here
+        if head == None :
+           return head 
+        itr = head
+        stack = []
+        while itr.next:
+            stack.append(itr.data)
+            # print(stack )
+            if itr.next.data in stack :
+                itr.next = itr.next.next
+                continue
+            itr = itr.next
+              
+        return head
