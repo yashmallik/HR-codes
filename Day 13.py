@@ -17,6 +17,8 @@
 
 # You are not responsible for reading any input from stdin. The Solution class creates a Book object and calls the MyBook class constructor (passing it the necessary arguments). It then calls the display method on the Book object.
 
+---------X---------------X------------------X------------------X-------------------------X----------------------X--------
+---------X---------------X------------------X------------------X-------------------------X----------------------X--------
 
 from abc import ABCMeta, abstractmethod
 class Book(object, metaclass=ABCMeta):
