@@ -16,7 +16,8 @@
 //Output Format
 
 //Your printArray function should print each element of its generic array parameter on a new line.
-
+---------X---------------X------------------X------------------X-------------------------X----------------------X--------
+---------X---------------X------------------X------------------X-------------------------X----------------------X--------
 
 static void PrintArray<T>(T[] array){
     foreach(T i in array)
